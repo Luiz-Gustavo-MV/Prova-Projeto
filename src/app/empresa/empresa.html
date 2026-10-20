@@ -1,0 +1,50 @@
+
+<section class="pagina">
+  <h1>Cadastro de Empresa</h1>
+
+  <form (ngSubmit)="enviar()" (reset)="limpar()">
+
+    <label for="nome">Nome:</label>
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      [(ngModel)]="empresa.nome"
+      required>
+
+    <label for="cnpj">CNPJ:</label>
+    <input
+      type="text"
+      id="cnpj"
+      name="cnpj"
+      [(ngModel)]="empresa.cnpj"
+      required>
+
+    <label for="logomarca">Logomarca:</label>
+    <input
+      type="text"
+      id="logomarca"
+      name="logomarca"
+      [(ngModel)]="empresa.logomarca"
+      required>
+
+    <label for="fundacao">Fundação:</label>
+    <input
+      type="date"
+      id="fundacao"
+      name="fundacao"
+      [(ngModel)]="empresa.fundacao"
+      required>
+
+    <label for="descricao">Descrição:</label>
+    <textarea
+      id="descricao"
+      name="descricao"
+      [(ngModel)]="empresa.descricao"
+      required></textarea>
+
+    <button type="reset">Limpar</button>
+    <button type="submit">Enviar</button>
+
+  </form>
+</section>
